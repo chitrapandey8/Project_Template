@@ -9,8 +9,8 @@ class Hotel extends Model<InferAttributes<Hotel> , InferCreationAttributes<Hotel
    declare location: string;
    declare createdAt: CreationOptional<Date>;
    declare updatedAt: CreationOptional<Date>;
-   declare rating : number;
-   declare rating_count : number;
+   declare rating ?: number;
+   declare rating_count ?: number;
 }
 
 //how do we connect this model with hotel table
