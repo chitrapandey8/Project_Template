@@ -1,6 +1,4 @@
-import { env } from "process";
-import { dbconfig } from "./index";
-import dotenv from 'dotenv';
+const dotenv = require('dotenv')
 dotenv.config();
 const dfconfig = {
     development: {
@@ -11,4 +9,4 @@ const dfconfig = {
         dialect : 'mysql'
     }
 }
-export default dfconfig;
+module.exports = dfconfig
