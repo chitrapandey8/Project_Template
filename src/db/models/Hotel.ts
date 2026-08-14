@@ -9,8 +9,10 @@ class Hotel extends Model<InferAttributes<Hotel> , InferCreationAttributes<Hotel
    declare location: string;
    declare createdAt: CreationOptional<Date>;
    declare updatedAt: CreationOptional<Date>;
+   declare deletedAt: CreationOptional<Date | null>;
    declare rating ?: number;
    declare rating_count ?: number;
+   
 }
 
 //how do we connect this model with hotel table
@@ -41,6 +43,10 @@ Hotel.init({
         type:"DATE",
         defaultValue: new Date(),
         field: 'updatedAt'
+    },
+    deletedAt:{
+       type:"DATE",
+       defaultValue:null,
     },
     rating:{
         type: "FLOAT",
